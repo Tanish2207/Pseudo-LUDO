@@ -3,11 +3,9 @@ import { useState } from 'react';
 import Rules from './rules';
 import DiceRoll from './dice-roll';
 
-const ResetRulesDice = () => {
 
-
-  const [isPopupOpen, setPopup] = useState(false);
-
+const ResetRulesDice = ({currentDice, roll_the_dice, isPopupOpen, setPopup}) => {
+  
 
   return (
     <div className="flex md:flex-col items-center gap-10">
@@ -19,7 +17,7 @@ const ResetRulesDice = () => {
       </div>
       <div className='flex justify-center items-center flex-col cursor-pointer'>
         {/* <img src="dice_1.svg" alt="" width="130px" /> */}
-        <DiceRoll />
+        <DiceRoll currentDice={currentDice} roll_the_dice={roll_the_dice}/>
         <p>Click on dice to roll</p>
       </div>
     </div>
