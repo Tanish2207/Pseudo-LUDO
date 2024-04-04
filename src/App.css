@@ -16,7 +16,7 @@ body {
 }
 
 .selected {
-    background: linear-gradient(45deg, #6190E8 -2.3%, #A7BFE8 100%);
+    background: linear-gradient(45deg, #5481d5 -2.3%, #A7BFE8 100%);
     background-position: bottom right;
 
 
@@ -36,6 +36,10 @@ body {
     grid-template-rows: repeat(4, 6rem);
 }
 
+.mobileGridBox{
+    width: 6rem;
+    height: 6rem;
+}
 @media screen and (max-width: 768px) {
     html {
         font-size: 14px;
@@ -47,5 +51,8 @@ body {
     .mobileGridBox{
         width: 5rem;
         height: 5rem;
+    }
+    .dice-image{
+        width: 100px;
     }
 }

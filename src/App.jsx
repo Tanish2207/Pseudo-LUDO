@@ -5,7 +5,7 @@ import Gameplay from './components/gameplay';
 import GameOver from './components/game-over';
 
 function App() {
-  const [isGameOn, setIsGameOn] = useState(true);
+  const [isGameOn, setIsGameOn] = useState(false);
   const [isGameOver, toggleGameOver] = useState(false);
   const [score, setScore] = useState(-1);
 
