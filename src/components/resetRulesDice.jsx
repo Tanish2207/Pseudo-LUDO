@@ -1,11 +1,13 @@
-import React from 'react'
-import { useState } from 'react';
+import { useState, useEffect} from 'react';
 import Rules from './rules';
 import DiceRoll from './dice-roll';
+import LoadingDice from './loading_dice';
 
 
-const ResetRulesDice = ({currentDice, roll_the_dice, isPopupOpen, setPopup, resetScore}) => {
-  
+const ResetRulesDice = ({ currentDice, setCurrentDice, roll_the_dice, isPopupOpen, setPopup, resetScore, isDiceRolling }) => {
+
+
+
 
   return (
     <div className="flex md:flex-col items-center gap-10">
@@ -16,8 +18,9 @@ const ResetRulesDice = ({currentDice, roll_the_dice, isPopupOpen, setPopup, rese
         {isPopupOpen && <Rules />}
       </div>
       <div className='flex justify-center items-center flex-col cursor-pointer'>
-        {/* <img src="dice_1.svg" alt="" width="130px" /> */}
-        <DiceRoll currentDice={currentDice} roll_the_dice={roll_the_dice}/>
+        {isDiceRolling ? <LoadingDice /> : <DiceRoll currentDice={currentDice} setCurrentDice={setCurrentDice} roll_the_dice={roll_the_dice} />}
+        {/* <DiceRoll currentDice={currentDice} setCurrentDice={setCurrentDice} roll_the_dice={roll_the_dice} />
+        {isDiceRolling && <LoadingDice />} */}
         <p>Click on dice to roll</p>
       </div>
     </div>

@@ -1,11 +1,14 @@
 import { useState } from "react";
 
-const NoSelector = ({ errorMsg,setErrorMsg, selectedNum, setSelectedNum }) => {
+const NoSelector = ({ errorMsg, setErrorMsg, selectedNum, setSelectedNum }) => {
 
     const arrNum = [1, 2, 3, 4, 5, 6];
     const numSelector = (value) => {
-        setSelectedNum(value);
-        setErrorMsg("");
+        setSelectedNum((prev) => {
+            setErrorMsg("");
+            return value;
+
+        });
     }
 
 
@@ -17,11 +20,10 @@ const NoSelector = ({ errorMsg,setErrorMsg, selectedNum, setSelectedNum }) => {
             <div className=" flex gap-2 justify-center">
                 {
                     arrNum.map((value, i) => {
-                        // console.log("SelectedNum me " + selectedNum + " ye store hua");
                         const isSelected = (selectedNum === value);
 
+                        // {console.log("selectedNum = "+selectedNum)}
                         return (
-                            
                             <div className={"cursor-pointer w-16 h-16 grid place-items-center font-extrabold text-3xl transition-all " + ((isSelected) ? "bg-black text-white" : "bg-white text-black")} style={{ border: "1px solid black" }} key={i} onClick={() => numSelector(value)}>{value}</div>
 
                         )

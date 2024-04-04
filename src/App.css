@@ -4,11 +4,7 @@ body {
     font-family: "Play", sans-serif;
 }
 
-@media screen and (max-width: 768px) {
-    html {
-        font-size: 14px;
-    }
-}
+
 
 .unselected {
     background-color: #585252;
@@ -33,5 +29,23 @@ body {
 
     100% {
         background-position: 100% 100%;
+    }
+}
+.mobileGrid{
+    grid-template-columns: repeat(5, 6rem);
+    grid-template-rows: repeat(4, 6rem);
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+    .mobileGrid{
+        grid-template-columns: repeat(5, 5rem);
+        grid-template-rows: repeat(4, 5rem);
+    }
+    .mobileGridBox{
+        width: 5rem;
+        height: 5rem;
     }
 }
