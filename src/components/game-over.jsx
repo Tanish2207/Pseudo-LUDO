@@ -1,3 +1,4 @@
+import { ShareAlt } from 'react-basicons';
 
 const GameOver = ({ score }) => {
   return (
@@ -7,8 +8,10 @@ const GameOver = ({ score }) => {
       <p className="text-3xl pt-10 font-bold mb-10">Yayy, Congratulations</p>
       <div className="font-semibold text-xl">
         <h3>You have successfully completed the pseudo-LUDO game in <br /> <span className="text-4xl text-red-600">{score} moves</span> </h3>
-
-        <p className="mt-20">Share the score with your friends and compete with them</p>
+        <div className='flex  '>
+          <img src="share-vec.svg" alt="" /><p >Share the score with your friends and compete with them</p>
+          
+        </div>
       </div>
     </div>
   )
