@@ -9,6 +9,7 @@ const Rules = () => {
         <p className="mb-2 font-medium">If the your number and the randomly generated dice number are same, you move 5 steps ahead</p>
         <p className="mb-2 font-medium">If the two numbers are not the same, you move only 1 step ahead</p>
         <p className="mb-2 font-medium">Final Score = Total no. of moves taken to complete the grid</p>
+        <p className="mb-2 font-semibold">In this game, you have to complete the grid in min possible moves</p>
       </div>
     </div>
   )
