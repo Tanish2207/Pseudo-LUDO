@@ -3,6 +3,7 @@ import Landing from './components/landing'
 import './App.css';
 import Gameplay from './components/gameplay';
 import GameOver from './components/game-over';
+import { Footer } from './components/footer';
 
 function App() {
   const [isGameOn, setIsGameOn] = useState(false);
@@ -17,7 +18,7 @@ function App() {
   return (
     <>
     {isGameOn ? ( isGameOver ? <GameOver score={score}/>:<Gameplay toggleGameOver={toggleGameOver} score={score} setScore={setScore} />) : <Landing toggle={toggleGameOn} />}
-    
+    <Footer />
     </>
   )
 }
